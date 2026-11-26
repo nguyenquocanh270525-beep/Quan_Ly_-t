@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f4f0;
+  color: #1e293b;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.cafe-shell-card {
+  background: #fffdf9 !important;
+  border: 1.5px solid #ebe6dc !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(30, 41, 59, 0.04);
+}
+
+.pos-product-card {
+  border: 1.5px solid #ebe6dc !important;
+  border-radius: 16px !important;
+  background: #ffffff !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  cursor: pointer;
+  overflow: hidden;
+  height: 100%;
+}
+
+.pos-product-card:hover {
+  transform: translateY(-3px);
+  border-color: #d97706 !important;
+  box-shadow: 0 10px 24px -6px rgba(217, 119, 6, 0.2);
+}
+
+.pos-product-img-wrap {
+  height: 146px;
+  background: linear-gradient(145deg, #fbf9f5 0%, #f1ece1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  position: relative;
+}
+
+.pos-product-img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.pos-cart-panel {
+  background: #fffdf9;
+  border: 1.5px solid #ebe6dc;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(30, 41, 59, 0.05);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-invoice,
+  .printable-invoice * {
+    visibility: visible;
+  }
+  .printable-invoice {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 16px;
+  }
+}
+.kpi-cafe-card {
+  background: #fffdf9 !important;
+  border: 1.5px solid #ebe6dc !important;
+  border-radius: 16px !important;
+  padding: 6px 4px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  box-shadow: 0 4px 16px rgba(30, 41, 59, 0.04);
+}
+
+.kpi-cafe-card:hover {
+  transform: translateY(-2px);
+  border-color: #d97706 !important;
+  box-shadow: 0 10px 22px -6px rgba(217, 119, 6, 0.16);
+}
+
+.kpi-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.kpi-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #78716c;
+}
+
+.kpi-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.kpi-sub {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #8c7a6b;
+}
+/* Thẻ sản phẩm nổi bật hơn cho cả Sản phẩm & Kho và POS */
+.showcase-product-card {
+  background: #fffdf9 !important;
+  border: 1.5px solid #e7e0d2 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showcase-product-card:hover {
+  transform: translateY(-4px);
+  border-color: #d97706 !important;
+  box-shadow: 0 14px 28px -8px rgba(217, 119, 6, 0.22);
+}
+
+.showcase-product-card.is-in-cart {
+  border-color: #d97706 !important;
+  background: #fffbeb !important;
+  box-shadow: 0 12px 24px -8px rgba(217, 119, 6, 0.25);
+}
+
+.showcase-img-stage {
+  position: relative;
+  height: 158px;
+  background: linear-gradient(180deg, #faf6ee 0%, #f3ece0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-bottom: 1px solid #efe9dc;
+}
+
+.showcase-img-stage img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.showcase-product-card:hover .showcase-img-stage img {
+  transform: scale(1.05);
+}
+
+/* Nút thao tác nổi bật */
+.btn-add-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 14px -3px rgba(217, 119, 6, 0.45);
+}
+
+.btn-add-primary:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+  color: #ffffff !important;
+}
+
+.btn-action-edit {
+  background: #fef3c7 !important;
+  border: 1px solid #fcd34d !important;
+  color: #92400e !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+}
+
+.btn-action-edit:hover {
+  background: #fde68a !important;
+  color: #78350f !important;
+}
+
+.btn-action-delete {
+  background: #fee2e2 !important;
+  border: 1px solid #fca5a5 !important;
+  color: #b91c1c !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+}
+
+.btn-action-delete:hover {
+  background: #fecaca !important;
+  color: #991b1b !important;
+}
+/* Giao diện retail POS hiện đại cho Nhập hàng - Thanh toán - Hóa đơn */
+.retail-summary-box {
+  background: #fffdf9;
+  border: 1.5px solid #e7e0d2;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.04);
+  transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.retail-summary-box:hover {
+  transform: translateY(-2px);
+  border-color: #d97706;
+}
+
+.retail-summary-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #78716c;
+  margin-bottom: 6px;
+}
+
+.retail-summary-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.pending-order-tile {
+  background: #fffdf9;
+  border: 1.5px solid #e7e0d2;
+  border-radius: 16px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+.pending-order-tile:hover {
+  border-color: #d97706;
+  background: #fffbeb;
+  transform: translateY(-2px);
+}
+
+.pending-order-tile.is-selected {
+  border-color: #d97706;
+  background: #fef3c7;
+  box-shadow: 0 10px 22px -8px rgba(217, 119, 6, 0.28);
+}
+
+.payment-method-btn {
+  border: 1.5px solid #e2d9c8 !important;
+  background: #fffdf9 !important;
+  color: #1e293b !important;
+  border-radius: 12px !important;
+  height: 48px !important;
+  font-weight: 600 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.payment-method-btn.active-method {
+  border-color: #d97706 !important;
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  font-weight: 700 !important;
+}
+
+.receipt-preview-box {
+  background: #fffdf9;
+  border: 1.5px dashed #d6cbb8;
+  border-radius: 16px;
+  padding: 18px 20px;
+}
